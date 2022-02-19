@@ -1,0 +1,11 @@
+--- ./build/php.m4.orig	2022-02-20 10:18:15.276567425 +0530
++++ ./build/php.m4	2022-02-20 10:18:36.546567417 +0530
+@@ -470,7 +470,7 @@
+ dnl Add an include path. If before is 1, add in the beginning of INCLUDES.
+ dnl
+ AC_DEFUN([PHP_ADD_INCLUDE],[
+-  if test "$1" != "/usr/include"; then
++  if test "$1" != "$prefix/include"; then
+     PHP_EXPAND_PATH($1, ai_p)
+     PHP_RUN_ONCE(INCLUDEPATH, $ai_p, [
+       if test "$2"; then
